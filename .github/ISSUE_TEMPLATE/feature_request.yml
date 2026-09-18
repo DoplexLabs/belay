@@ -1,0 +1,19 @@
+name: Feature request
+description: Suggest an improvement to Belay
+title: "[Request] "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem should Belay solve?
+      description: Describe the workflow and pain point rather than only the proposed feature.
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: What would a good outcome look like?
+    validations:
+      required: true

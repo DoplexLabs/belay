@@ -1,0 +1,40 @@
+name: Bug report
+description: Report a reproducible problem with Belay
+title: "[Bug] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not include credentials, transcript excerpts, private source code, or company-confidential information.
+  - type: input
+    id: version
+    attributes:
+      label: Belay version
+      description: Output of `belay version`
+    validations:
+      required: true
+  - type: dropdown
+    id: harness
+    attributes:
+      label: Harness
+      options:
+        - Claude Code
+        - Codex
+        - Both
+        - Not harness-specific
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Include concise reproduction steps and the expected result.
+    validations:
+      required: true
+  - type: textarea
+    id: doctor
+    attributes:
+      label: Sanitized doctor output
+      description: Paste `belay doctor` output only after removing private information.
